@@ -1288,7 +1288,6 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
   build_date = target_info.GetBuildProp("ro.artstar.build_date")
   security_patch = target_info.GetBuildProp("ro.build.version.security_patch")
   device = target_info.GetBuildProp("ro.artstar.device")
-  artstar_version = target_info.GetBuildProp("ro.artstar.custom_version")
 
   script.Print("------------------------------------------ ");
   script.Print("   _       _   ___ _             ___  ___  ");
@@ -1301,7 +1300,6 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
   script.Print("               by ArtStar Team             ");
   script.Print("------------------------------------------ ");
   script.Print(" Android version: %s"%(android_version));
-  script.Print(" ArtStar Version: %s"%(artstar_version));
   script.Print(" Build id: %s"%(build_id));
   script.Print(" Build date: %s"%(build_date));
   script.Print(" Security patch: %s"%(security_patch));
