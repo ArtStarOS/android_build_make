@@ -1288,25 +1288,25 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
   build_date = target_info.GetBuildProp("ro.artstar.build_date")
   security_patch = target_info.GetBuildProp("ro.build.version.security_patch")
   device = target_info.GetBuildProp("ro.artstar.device")
+  artstar_version = target_info.GetBuildProp("ro.artstar.custom_version")
 
-  script.Print("-------------------------------------------------------");
-  script.Print("                _    _____ _              ____   _____ ");
-  script.Print("     /\        | |  / ____| |            / __ \ / ____|");
-  script.Print("    /  \   _ __| |_| (___ | |_ __ _ _ __| |  | | (___  ");
-  script.Print("   / /\ \ | '__| __|\___ \| __/ _` | '__| |  | |\___ \ ");
-  script.Print("  / ____ \| |  | |_ ____) | || (_| | |  | |__| |____) |");
-  script.Print(" /_/    \_\_|   \__|_____/ \__\__,_|_|   \____/|_____/ ");
-  script.Print("						       ");
-  script.Print("-------------------------------------------------------");
-  script.Print("                  	ArtStarOS                      ");
-  script.Print("                     by ArtStar Team                   ");
-  script.Print("-------------------------------------------------------");
+  script.Print("------------------------------------------ ");
+  script.Print("   _       _   ___ _             ___  ___  ");
+  script.Print("  /_\  _ _| |_/ __| |_ __ _ _ _ / _ \/ __| ");
+  script.Print(" / _ \| '_|  _\__ \  _/ _` | '_| (_) \__ \ ");
+  script.Print("/_/ \_\_|  \__|___/\__\__,_|_|  \___/|___/ ");
+  script.Print("                                           ");
+  script.Print("------------------------------------------ ");
+  script.Print("                  ArtStarOS                ");
+  script.Print("               by ArtStar Team             ");
+  script.Print("------------------------------------------ ");
   script.Print(" Android version: %s"%(android_version));
+  script.Print(" ArtStar Version: %s"%(artstar_version));
   script.Print(" Build id: %s"%(build_id));
   script.Print(" Build date: %s"%(build_date));
   script.Print(" Security patch: %s"%(security_patch));
   script.Print(" Device: %s"%(device));
-  script.Print("----------------------------------------------");
+  script.Print("------------------------------------------ ");
 
   device_specific.FullOTA_InstallBegin()
 
@@ -2080,18 +2080,16 @@ else if get_stage("%(bcb_dev)s") != "3/3" then
   prev_security_patch = source_info.GetBuildProp("ro.build.version.security_patch")
   security_patch = target_info.GetBuildProp("ro.build.version.security_patch")
 
-  script.Print("-------------------------------------------------------");
-  script.Print("                _    _____ _              ____   _____ ");
-  script.Print("     /\        | |  / ____| |            / __ \ / ____|");
-  script.Print("    /  \   _ __| |_| (___ | |_ __ _ _ __| |  | | (___  ");
-  script.Print("   / /\ \ | '__| __|\___ \| __/ _` | '__| |  | |\___ \ ");
-  script.Print("  / ____ \| |  | |_ ____) | || (_| | |  | |__| |____) |");
-  script.Print(" /_/    \_\_|   \__|_____/ \__\__,_|_|   \____/|_____/ ");
-  script.Print("						       ");
-  script.Print("-------------------------------------------------------");
-  script.Print("                  	ArtStarOS                      ");
-  script.Print("                     by ArtStar Team                   ");
-  script.Print("-------------------------------------------------------");
+  script.Print("------------------------------------------ ");
+  script.Print("   _       _   ___ _             ___  ___  ");
+  script.Print("  /_\  _ _| |_/ __| |_ __ _ _ _ / _ \/ __| ");
+  script.Print(" / _ \| '_|  _\__ \  _/ _` | '_| (_) \__ \ ");
+  script.Print("/_/ \_\_|  \__|___/\__\__,_|_|  \___/|___/ ");
+  script.Print("                                           ");
+  script.Print("------------------------------------------ ");
+  script.Print("                ArtStarOS                  ");
+  script.Print("             by ArtStar Team               ");
+  script.Print("------------------------------------------ ");
   script.Print(" Android version: %s"%(android_version));
   if prev_build_id != build_id:
     script.Print(" Build id: %s -> %s"%(prev_build_id, build_id));
@@ -2626,18 +2624,17 @@ def WriteIncrementalOTAPackage(target_zip, source_zip, output_file):
   prev_security_patch = source_info.GetBuildProp("ro.build.version.security_patch")
   security_patch = target_info.GetBuildProp("ro.build.version.security_patch")
 
-  script.Print("-------------------------------------------------------");
-  script.Print("                _    _____ _              ____   _____ ");
-  script.Print("     /\        | |  / ____| |            / __ \ / ____|");
-  script.Print("    /  \   _ __| |_| (___ | |_ __ _ _ __| |  | | (___  ");
-  script.Print("   / /\ \ | '__| __|\___ \| __/ _` | '__| |  | |\___ \ ");
-  script.Print("  / ____ \| |  | |_ ____) | || (_| | |  | |__| |____) |");
-  script.Print(" /_/    \_\_|   \__|_____/ \__\__,_|_|   \____/|_____/ ");
-  script.Print("						       ");
-  script.Print("-------------------------------------------------------");
-  script.Print("                  	ArtStarOS                      ");
-  script.Print("                     by ArtStar Team                   ");
-  script.Print("-------------------------------------------------------");
+  script.Print("------------------------------------------ ");
+  script.Print("   _       _   ___ _             ___  ___  ");
+  script.Print("  /_\  _ _| |_/ __| |_ __ _ _ _ / _ \/ __| ");
+  script.Print(" / _ \| '_|  _\__ \  _/ _` | '_| (_) \__ \ ");
+  script.Print("/_/ \_\_|  \__|___/\__\__,_|_|  \___/|___/ ");
+  script.Print("                                           ");
+  script.Print("------------------------------------------ ");
+  script.Print("                ArtStarOS                  ");
+  script.Print("             by ArtStar Team               ");
+  script.Print("------------------------------------------ ");
+  script.Print(" Android version: %s"%(android_version));
   script.Print(" Android version: %s"%(android_version));
   if prev_build_id != build_id:
     script.Print(" Build id: %s -> %s"%(prev_build_id, build_id));
