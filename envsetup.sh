@@ -582,9 +582,18 @@ function print_lunch_menu()
 {
     local uname=$(uname)
     echo
-    echo "You're building on" $uname
-    echo
-    echo "Lunch menu... pick a combo:"
+
+    echo ""
+    tput setaf 1;
+    tput bold;
+    echo "   █████╗ ███████╗ ██████╗ ██████╗ "
+    echo "  ██╔══██╗██╔════╝██╔═══██╗██╔══██╗"
+    echo "  ███████║███████╗██║   ██║██████╔╝"
+    echo "  ██╔══██║╚════██║██║   ██║██╔═══╝ "
+    echo "  ██║  ██║███████║╚██████╔╝██║     "
+    echo "  ╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═╝     "
+    tput sgr0;
+    echo ""
 
     local i=1
     local choice
@@ -1494,6 +1503,7 @@ function _wrap_build()
     if [ -n "$ncolors" ] && [ $ncolors -ge 8 ]; then
         color_failed=$'\E'"[0;31m"
         color_success=$'\E'"[0;32m"
+	color_banner=$'\E'"[0;36m"
         color_reset=$'\E'"[00m"
     else
         color_failed=""
@@ -1502,7 +1512,13 @@ function _wrap_build()
     fi
     echo
     if [ $ret -eq 0 ] ; then
-        echo -n "${color_success}#### build completed successfully "
+        echo -n "${color_success}####     build completed successfully    "
+	echo -n "${color_banner}####    █████╗ ███████╗ ██████╗ ██████╗  "
+	echo -n "${color_banner}####   ██╔══██╗██╔════╝██╔═══██╗██╔══██╗ "
+	echo -n "${color_banner}####   ███████║███████╗██║   ██║██████╔╝ "
+	echo -n "${color_banner}####   ██╔══██║╚════██║██║   ██║██╔═══╝  "
+	echo -n "${color_banner}####   ██║  ██║███████║╚██████╔╝██║      "
+	echo -n "${color_banner}####   ╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═╝      "
     else
         echo -n "${color_failed}#### failed to build some targets "
     fi
