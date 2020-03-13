@@ -1512,13 +1512,14 @@ function _wrap_build()
     fi
     echo
     if [ $ret -eq 0 ] ; then
-        echo -n "${color_success}####     build completed successfully    "
-	echo -n "${color_banner}####    █████╗ ███████╗ ██████╗ ██████╗  "
-	echo -n "${color_banner}####   ██╔══██╗██╔════╝██╔═══██╗██╔══██╗ "
-	echo -n "${color_banner}####   ███████║███████╗██║   ██║██████╔╝ "
-	echo -n "${color_banner}####   ██╔══██║╚════██║██║   ██║██╔═══╝  "
-	echo -n "${color_banner}####   ██║  ██║███████║╚██████╔╝██║      "
-	echo -n "${color_banner}####   ╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═╝      "
+        echo -n "${color_success}####     build completed successfully   #### "
+	echo -n "${color_banner} 
+	 █████╗ ███████╗ ██████╗ ██████╗  
+	██╔══██╗██╔════╝██╔═══██╗██╔══██╗ 
+	███████║███████╗██║   ██║██████╔╝ 
+	██╔══██║╚════██║██║   ██║██╔═══╝  
+	██║  ██║███████║╚██████╔╝██║      
+	╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═╝      "
     else
         echo -n "${color_failed}#### failed to build some targets "
     fi
