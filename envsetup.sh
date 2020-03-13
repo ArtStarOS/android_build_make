@@ -1512,7 +1512,7 @@ function _wrap_build()
     fi
     echo
     if [ $ret -eq 0 ] ; then
-        echo -n "${color_success}####     build completed successfully   #### "
+        echo -n "${color_success}####     build completed successfully     #### "
 	echo -n "${color_banner} 
 	 █████╗ ███████╗ ██████╗ ██████╗  
 	██╔══██╗██╔════╝██╔═══██╗██╔══██╗ 
@@ -1530,7 +1530,7 @@ function _wrap_build()
     elif [ $secs -gt 0 ] ; then
         printf "(%s seconds)" $secs
     fi
-    echo " ####${color_reset}"
+    echo "${color_reset}"
     echo
     return $ret
 }
